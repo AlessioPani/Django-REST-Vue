@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <p>Product: {{ product.name }}</p>
+    <p>Manufacturer: {{ product.manufacturer }}</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Price: {{ product.price }} Euro</p>
+    <p>Shipping cost: {{ product.shipping_cost }} Euro</p>
+
+    <img src="{{ product.photo.url }}" height="500" width="600" alt="Product photo">
+</body>
+</html>
