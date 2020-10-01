@@ -46,6 +46,6 @@ class JobOfferDetailAPIView(APIView):
                             status=status.HTTP_400_BAD_REQUEST)
 
     def delete(self, request, pk):
-        job_offer = get_object_or_404(JobOffer, pk=pk)
+        job_offer = self.get_object(pk=pk)
         job_offer.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
