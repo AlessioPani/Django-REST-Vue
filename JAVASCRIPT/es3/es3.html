@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>Example 3</title>
+    <style media="screen">
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <br>
+    <select id="color-change">
+        <option selected disabled>Select a colour!</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+        <option value="grey">Grey</option>
+        <option value="black">Black</option>
+    </select>
+    <button onclick="this.style.display='none'" type="button">Click to remove me!</button>
+</body>
+</html>
