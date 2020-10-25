@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 2 - Methods and Events</title>
+    <style media="screen">
+        .box {
+            background: green;
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="app">
+        <h1>{{ lesson }}</h1>
+        <br>
+        <h3>Counter: {{ counter }}</h3>
+
+        <!-- Without a definition of a method -->
+        <button @click="counter++">Increase the counter</button>
+        <!-- <button v-on:click="counter++">Increase the counter</button> -->
+
+        <!-- With a definition of a method -->
+        <button @click="increaseCounter">Increase the counter - Method</button>
+        <!-- <button v-on:click="increaseCounter">Increase the counter - Method</button> -->
+        <br>
+        <div class="box" @mouseover="overTheBox">
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

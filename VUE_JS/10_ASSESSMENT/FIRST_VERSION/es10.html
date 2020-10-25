@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+
+    <!-- Custom style -->
+    <style>
+        hr {
+            border: 1px double black;
+        }
+    </style>
+
+    <title>Assessment - Vue.js</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO App</h1>
+    </div>
+    
+    
+    <div id="app">
+        
+        <!-- Counter -->
+        <div class="container">
+            <hr>
+            <h6>Task counter: {{ counter }}</h6>
+            <hr>
+        </div>
+
+
+        <!-- Insert a new task -->
+        <div class="container">
+            <form @submit.prevent="onSubmit">
+                <div class="form-group">
+                    <label for="new_task">New task</label>
+                    <input id="new_task" 
+                           class="form-control" 
+                           type="text" 
+                           :keyup.enter="onSubmit" 
+                           v-model="task"
+                    ></div>
+                    
+                    <!-- Error, if any -->
+                    <span v-if="error"><strong>&nbsp;&nbsp;{{ error }}</strong></span>
+            </form>
+            <hr>
+        </div>
+        
+        <!-- List of all the tasks -->
+        <div class="container mt-3 button-centered" >
+            <div class="alert alert-success" 
+                 role="alert" 
+                 v-for="(task, index) in tasks"
+                 :key="index">
+                {{ task }}
+
+                <!-- Delete a task -->
+                <button @click="taskDelete(index)">X</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

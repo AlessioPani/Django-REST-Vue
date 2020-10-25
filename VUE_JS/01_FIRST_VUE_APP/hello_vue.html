@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- Mustache-like syntax -->
+        <h1>{{ message }}</h1>
+
+        <!-- Directive syntax -->
+        <!-- <h1 v-text="message"></h1> -->
+        <h1> {{ value }}</h1>
+        <h1> {{ value * 5 }}</h1>
+        <h1> {{ "Hello " + "World" }}</h1>
+        <h1> {{ 33 / 11 * 5 }}</h1>
+        <h1> {{ Math.random() }}</h1>
+        <h1> {{ message.split("").reverse().join("") }}</h1>
+        <!-- Using v-bind... -->
+        <img v-bind:src="imgSrc" alt="">
+        <br>
+        <!-- or a shortcut for interpolation -->
+        <a :href="imgSrc">Click here!</a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
